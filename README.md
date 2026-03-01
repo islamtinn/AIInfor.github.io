@@ -1,0 +1,2 @@
+# AIInfor.github.io
+тест
