@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тіркелу және кіру · AI Qorym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow one"></div>
+  <div class="bg-glow two"></div>
+
+  <header class="nav container">
+    <div class="logo">AI Qorym</div>
+    <nav>
+      <a href="index.html#pipeline">Қадамдар</a>
+      <a href="index.html#llm">LLM</a>
+      <a href="index.html#build">Жобалау</a>
+      <a href="index.html#use">Қолданылуы</a>
+      <a class="pill" id="accountLink" href="register.html">Тіркелу</a>
+    </nav>
+  </header>
+
+  <main class="container section fade">
+    <h1>Тіркелу және кіру</h1>
+    <p class="lead">Демо мақсатындағы жергілікті (localStorage) аккаунт. Браузеріңіз деректерді сақтайды, сондықтан қайта кіргенде сессия жабылмайды.</p>
+
+    <div class="auth-grid">
+      <div class="form-card">
+        <h3>Жаңа аккаунт</h3>
+        <form id="registerForm">
+          <label for="fullname">Аты-жөніңіз</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Айдана Қ." required>
+
+          <label for="nickname">Ник (уникалды)</label>
+          <input id="nickname" name="nickname" type="text" placeholder="aidana_ai" required>
+
+          <label for="email">Email (уникалды)</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="password">Құпиясөз</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required>
+
+          <label for="format">Формат</label>
+          <select id="format" name="format">
+            <option>Онлайн (Zoom)</option>
+            <option>Офлайн (Алматы)</option>
+          </select>
+
+          <label for="goal">Негізгі мақсатыңыз</label>
+          <textarea id="goal" name="goal" placeholder="Мысалы: клиенттік чатбот, ұсыныс жүйесі, қазақ тіліне бейімдеу"></textarea>
+
+          <label><input type="checkbox" required> Құпиялылық саясатына келісемін</label>
+
+          <div class="hero-actions" style="margin-top:16px">
+            <button class="btn primary" type="submit">Тіркелу</button>
+            <a class="btn ghost" href="index.html">Басты бет</a>
+          </div>
+          <div id="registerMsg" class="alert" style="display:none"></div>
+          <div class="form-note">Аты, ник және email қайталанбауы тиіс. Сәтті тіркелген соң автоматты түрде профильге өтеміз.</div>
+        </form>
+      </div>
+
+      <div class="form-card">
+        <h3>Кіру</h3>
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="loginEmail" type="email" placeholder="you@example.com" required>
+
+          <label for="loginPassword">Құпиясөз</label>
+          <input id="loginPassword" name="loginPassword" type="password" placeholder="••••••••" required>
+
+          <div class="hero-actions" style="margin-top:16px">
+            <button class="btn primary" type="submit">Кіру</button>
+            <a class="btn ghost" href="profile.html">Профильге</a>
+          </div>
+          <div id="loginMsg" class="alert" style="display:none"></div>
+          <div class="form-note">Сессия браузерде сақталады, сондықтан қайта ашқанда жүйеден шықпайсыз. Басқа құрылғыға көшкенде қайта кіру керек.</div>
+        </form>
+      </div>
+    </div>
+
+    <section class="section" style="margin-bottom:20px">
+      <h2>Аккаунт қалай сақталады?</h2>
+      <div class="list">
+        <div class="list-item"><strong>LocalStorage</strong> — деректер тек осы браузерде сақталады; серверге жіберілмейді.</div>
+        <div class="list-item"><strong>Уникалдылық</strong> — бірдей ат, ник немесе email қайта тіркелмейді.</div>
+        <div class="list-item"><strong>Авто-логин</strong> — тіркелген немесе кірген соң сессия email-і сақталады.</div>
+        <div class="list-item"><strong>Шығу</strong> — «Шығу» батырмасы localStorage-тан сессияны өшіреді.</div>
+      </div>
+      <p class="form-note">Өндірісте бұл логика бекендте орындалады және құпиясөздер хэшпен сақталады; мұнда демо мақсатындағы қарапайым фронт-end симуляция.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>AI Qorym · Байланыс: hello@example.com</div>
+    <div>Суреттер: Unsplash.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
