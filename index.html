@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Qorym · Жасанды интеллект қалай жұмыс істейді</title>
+  <meta name="description" content="Жасанды интеллект құрылымы, әдістері, MLOps, қауіпсіздік, қазақ тіліне бейімдеу туралы визуалды гид (2026 жаңартылған)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow one"></div>
+  <div class="bg-glow two"></div>
+
+  <header class="nav container">
+    <div class="logo">AI Qorym</div>
+    <nav>
+      <a href="#pipeline">Қадамдар</a>
+      <a href="#types">Әдістер</a>
+      <a href="#llm">LLM</a>
+      <a href="#build">Жобалау</a>
+      <a href="#use">Қолданылуы</a>
+      <a href="#risks">Тәуекел</a>
+      <a class="pill" id="accountLink" href="register.html">Тіркелу</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section hero-grid fade" id="top">
+      <div>
+        <span class="pill-badge">2026 жаңартылған</span>
+        <h1>Жасанды интеллект қалай жұмыс істейді?</h1>
+        <p class="lead">Деректер + алгоритм + есептеу күші = ақылды болжамдар. Бұл бет AI-дың құрылымы, негізгі әдістері, инфрақұрылымы және қауіпсіз қолдану жолдары туралы қысқа әрі көрнекі түсіндірме.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#pipeline">Қадамдарды көру</a>
+          <a class="btn ghost" href="#gallery">Визуалдар</a>
+          <a class="btn ghost" href="register.html">Тіркелу/кіру</a>
+        </div>
+        <div class="chips">
+          <div class="chip"><strong>3 қабат</strong><span>Деректер · Модель · Инфрақұрылым</span></div>
+          <div class="chip"><strong>Тірі цикл</strong><span>Жинау → Оқыту → Орнату → Мониторинг</span></div>
+          <div class="chip"><strong>Қауіпсіздік</strong><span>Privacy · Fairness · Red Teaming</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="glass">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" alt="AI абстракт суреті">
+          <ul class="stack">
+            <li>Шикі дерек → фичалар → лейбл</li>
+            <li>Модель: Transformer / CNN / Tree</li>
+            <li>API немесе қолданба интеграциясы</li>
+            <li>Мониторинг, дрейфті бақылау, қайта оқыту</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade" id="essence">
+      <h2>AI-дың қысқа формуласы</h2>
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Деректер</span>
+          <h3>Сапа + көлем</h3>
+          <p>Тазартылған, теңгерімді дерек жиыны үлгінің дәлдігін анықтайды. Алалаушылықты азайту үшін әр түрлі көзден жинаңыз.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Алгоритм</span>
+          <h3>Мақсатқа сай модель</h3>
+          <p>Логистикалық регрессиядан трансформерге дейін: тапсырмаңызға (классификация, болжау, генерация) сәйкес архитектура таңдаңыз.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Есептеу</span>
+          <h3>GPU/TPU ресурсы</h3>
+          <p>Үлкен модельдерге параллель есептеу қажет. Үйретуден бөлек, инференс жылдамдығын да жоспарлаңыз.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade timeline" id="pipeline">
+      <h2>AI құру қадамдары</h2>
+      <ol>
+        <li><h4>Мәселені анықтау</h4><p>Бизнес не білім беру мақсаттарын метрикамен (accuracy, F1, latency) байлаңыз.</p></li>
+        <li><h4>Деректерді жинау</h4><p>Келісімге сай дереккөздер, анонимизация, баланс. Лейбл сапасын тексеріңіз.</p></li>
+        <li><h4>Фича инжиниринг</h4><p>Тазалау, нормализация, токенизация, дерек көбейту. Train/val/test бөлу.</p></li>
+        <li><h4>Модель таңдау және оқыту</h4><p>Base модель → fine-tune. Регуляризация, early stopping, cross‑validation.</p></li>
+        <li><h4>Бағалау</h4><p>Метрикалар + қателік талдау. Сыртқы бейтарап тест қолдану.</p></li>
+        <li><h4>Орнату және мониторинг</h4><p>API/Edge, логтар, дрейф және қауіпсіздік. Қайта оқыту циклі.</p></li>
+      </ol>
+    </section>
+
+    <section class="section fade" id="build">
+      <h2>AI-ды жасау кезінде нені қарастырдық?</h2>
+      <div class="two-col">
+        <div class="card">
+          <span class="tag">Инженерлік принциптер</span>
+          <div class="list" style="margin-top:8px">
+            <div class="list-item"><strong>Дерек сапасы</strong> — шу, қайталану, теңгерім; label noise талдау.</div>
+            <div class="list-item"><strong>Қауіпсіздік</strong> — prompt injection пен дерек шығару тесттері.</div>
+            <div class="list-item"><strong>Нейтралдық</strong> — fairness метрикалары (DP, EO), мәтін сүзгісі.</div>
+            <div class="list-item"><strong>Трассировка</strong> — модель, дерек, конфиг версиялау (MLflow/DVC).</div>
+            <div class="list-item"><strong>Экономика</strong> — latency/құн бюджетін сақтау (batching, quantization).</div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="tag">Құру барысы</span>
+          <p>Базалық трансформерді көптілді корпуспен алдын ала оқыту, кейін қазақ тілі мәтіндерімен fine-tune. RLHF/DPO арқылы диалог сапасын түзеттік. RAG қабатын қосып, факті дәлдігін арттырдық. Сынақта A/B, canary және қызыл команда (red team) сценарийлерін жүргіздік.</p>
+          <p class="form-note">Нәтиже: қауіпсіздік сүзгілерімен, аудиторлық логпен және метрикалық мониторингімен бірге өндірістік API.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade" id="types">
+      <h2>Әдістер мен модельдер</h2>
+      <div class="grid-3">
+        <div class="card"><span class="tag">Машиналық оқыту</span><h3>Қадағаланатын</h3><p>Лейблденген дерекпен класс, регрессия, уақыттық қатар болжамдары. Мысал: gradient boosting.</p></div>
+        <div class="card"><span class="tag">Қадағаланбайтын</span><h3>Үлгіні табу</h3><p>Кластерлеу (k-means), өлшемді азайту (PCA, t-SNE), аномалия детекциясы.</p></div>
+        <div class="card"><span class="tag">Күшейтпелі</span><h3>Әрекеттен үйрену</h3><p>Агент марапат арқылы стратегия құрады. Роботика, ойын, ұсыныс жүйелері.</p></div>
+        <div class="card"><span class="tag">Терең нейрондық желілер</span><h3>CNN / RNN / Transformer</h3><p>Күрделі өрнектерді автоматты үйрену. Көру, тіл, аудиоға қолданылады.</p></div>
+        <div class="card"><span class="tag">LLM</span><h3>Үлкен тілдік модельдер</h3><p>Трансформер, миллиардтаған параметр. Диалог, код, аударма, агенттер.</p></div>
+        <div class="card"><span class="tag">Генеративті</span><h3>Жаңа контент</h3><p>Diffusion, GAN, VAE: сурет, музыка, 3D, видео, синтетикалық дерек.</p></div>
+      </div>
+    </section>
+
+    <section class="section fade" id="llm">
+      <h2>LLM және RAG қалай жұмыс істейді</h2>
+      <div class="two-col">
+        <div class="card">
+          <span class="tag">LLM құбыры</span>
+          <div class="badge-line">
+            <span class="badge">Препроцесс: токенизация</span>
+            <span class="badge">Үйрету: next-token</span>
+            <span class="badge">Fine-tune / SFT</span>
+            <span class="badge">RLHF / DPO</span>
+          </div>
+          <p>LLM мәтінді токендерге бөледі, трансформер қабаттары келесі токенді болжайды. Адам пікіріне сәйкес болу үшін SFT және RLHF қолданылады. Кідіріс пен құнды азайту үшін кванттау және distillation маңызды.</p>
+          <table class="table">
+            <tr><th>Этап</th><th>Негізгі ресурс</th><th>Метрика</th></tr>
+            <tr><td>Pretraining</td><td>GPU/TPU кластер</td><td>Loss, throughput</td></tr>
+            <tr><td>Fine-tune</td><td>Орташа GPU</td><td>Task accuracy</td></tr>
+            <tr><td>Инференс</td><td>CPU/GPU/Edge</td><td>Latency, cost</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <span class="tag">RAG схемасы</span>
+          <p>Retrieval-Augmented Generation факт сақтауды жақсартады: іздеу → контекст біріктіру → генерация.</p>
+          <pre><code># Псевдо-код (Python стиль)
+user_q = query()
+ctx = vector_store.search(user_q, top_k=5)
+prompt = build(ctx, user_q)
+answer = llm.generate(prompt)
+return answer</code></pre>
+          <p class="form-note">Артықшылығы: факті дәлдігі ↑, модельді қайта оқытпай мазмұнды жаңарту.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade" id="mlops">
+      <h2>Инфрақұрылым және MLOps</h2>
+      <div class="grid-3">
+        <div class="card"><h3>Версиялау</h3><p>Дерек (DVC/LakeFS), модель (MLflow/Weights&Biases), конфигурация (Git). Барлығы қайталанатындық үшін.</p></div>
+        <div class="card"><h3>CI/CD</h3><p>Unit тест, data quality тест, қауіпсіздік сканерлері, модель картасы. Canary немесе Shadow deploy.</p></div>
+        <div class="card"><h3>Мониторинг</h3><p>Latency, drift, bias, шығын. Алдын ала ескертулер мен авто‑retrain триггерлері.</p></div>
+      </div>
+    </section>
+
+    <section class="section fade" id="use">
+      <h2>Қолданылу мысалдары</h2>
+      <div class="list">
+        <div class="list-item"><strong>Табиғи тіл</strong><br/>Чатбот, құжатты қысқарту, автоматты аударма, заң құжатын іздеу.</div>
+        <div class="list-item"><strong>Компьютерлік көру</strong><br/>Медициналық кескін талдау, сапаны бақылау, видео аналитика.</div>
+        <div class="list-item"><strong>Ұсыныс жүйелері</strong><br/>Контент пен өнімдерді персоналдау, динамикалық баға.</div>
+        <div class="list-item"><strong>Бизнес болжау</strong><br/>Сұраныс, қаржылық тәуекел, тұтынушы кетуін болжау.</div>
+        <div class="list-item"><strong>Дыбыс және сөйлеу</strong><br/>Авто транскрипция, дауыс биометриясы, real-time субтитр.</div>
+        <div class="list-item"><strong>Креатив</strong><br/>Сурет/бейне генерация, код көмекшілері, маркетинг мәтіні.</div>
+      </div>
+    </section>
+
+    <section class="section fade" id="risks">
+      <h2>Қауіптер және азайту жолдары</h2>
+      <div class="grid-3">
+        <div class="card"><h3>Дерек алалаушылығы</h3><p>Әртүрлі популяцияны қамтитын дерек, қайта өлшемдеу, fairness метрикалары.</p></div>
+        <div class="card"><h3>Қауіпсіздік</h3><p>Prompt injection, дерек шығару. Контент сүзгілері, rate limit, қауіпсіздік тесттері.</p></div>
+        <div class="card"><h3>Энергия ізі</h3><p>Модель өлшемін оңтайлау, кванттау, distillation, жасыл дата-орталықтар.</p></div>
+        <div class="card"><h3>Галлюцинация</h3><p>Негізгі дереккөзге (RAG) сүйену, факт тексеру, құралды шектеу.</p></div>
+        <div class="card"><h3>Құпия дерек</h3><p>PII жасыру, differential privacy, қолжетімділікті шектеу.</p></div>
+        <div class="card"><h3>Заң және этика</h3><p>Авторлық құқық, лицензияны тексеру, жауапкершілік саясаты.</p></div>
+      </div>
+    </section>
+
+    <section class="section fade" id="gallery">
+      <h2>Визуалдар</h2>
+      <div class="gallery">
+        <figure><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80" alt="Деректер орталығы"><figcaption>Есептеу инфрақұрылымы</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1400&q=80" alt="Робот қолы"><figcaption>Роботика және сенсорика</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80" alt="Команда жұмыс үстінде"><figcaption>AI өнімін құру командасы</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1400&q=80" alt="Болашақ интерфейс"><figcaption>Интерфейс және визуализация</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80" alt="Нейрон қабаттары"><figcaption>Нейрондық желі бейнесі</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1400&q=80" alt="Динамикалық граф"><figcaption>Граф және байланыс</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section fade" id="faq">
+      <h2>Жиі қойылатын сұрақтар</h2>
+      <div class="grid-3">
+        <details open><summary>AI мен ML айырмасы?</summary><p>AI — кең ұғым, адамның когнитивін еліктейтін жүйелер. Машиналық оқыту — деректен үлгі үйренетін AI ішкі саласы.</p></details>
+        <details><summary>Неге GPU қажет?</summary><p>Матрицалық көбейту параллель орындалғандықтан, терең модельдерді үйрету және жылдам инференс үшін GPU/TPU тиімді.</p></details>
+        <details><summary>Модель сапасын қалай өлшейміз?</summary><p>Тапсырмаға сай метрика (accuracy, F1, ROC-AUC), сонымен қатар қателік талдауы, қарсылыққа төзімділік және инференс кідірісі.</p></details>
+        <details><summary>Қандай стекпен бастауға болады?</summary><p>Python, NumPy/Pandas → scikit-learn → PyTorch/JAX. Бұлтта: GPU VM, немесе managed қызметтер.</p></details>
+        <details><summary>Деректер құпиялығы?</summary><p>PII жасыру, келісім алу, қолжетімділікті шектеу, audit log жүргізу, модельге кіретін деректі минимизациялау.</p></details>
+        <details><summary>Қазақ тіліндегі дерек?</summary><p>Ашық корпустар (Wikipedia, Common Voice), сондай-ақ ұйымның рұқсат етілген мәтіндерін fine-tune немесе RAG үшін пайдалануға болады.</p></details>
+      </div>
+    </section>
+
+    <section class="section fade" id="career">
+      <h2>AI маманы болуға қысқа жол</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Білім жол картасы</h3>
+          <ul class="stack">
+            <li>Python, деректер құрылымдары</li>
+            <li>Математика: сызықтық алгебра, ықтималдық, статистика</li>
+            <li>ML негіздері: регрессия, классификация, валидация</li>
+            <li>DL/LLM: PyTorch, transformer, quantization</li>
+            <li>MLOps: контейнер, CI/CD, мониторинг</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Қысқа чеклист</h3>
+          <div class="list" style="margin-top:0">
+            <div class="list-item">GitHub портфолио: 2–3 жобаны жариялаңыз</div>
+            <div class="list-item">Kaggle немесе open-source үлес қосу</div>
+            <div class="list-item">Модель картасы және readme жазу әдеті</div>
+            <div class="list-item">Қазақ тіліндегі дерекке бір жобаны бейімдеу</div>
+            <div class="list-item">Интервьюге дайындық: жүйелік дизайн + ML сұрақтар</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade cta">
+      <h2>AI жобасын бастау</h2>
+      <p>Мақсатты анықтаңыз → шағын дерекпен прототип жасаңыз → метрика бекітіп, қауіпсіздік сүзгілерін қосыңыз → пайдаланушылармен сынаңыз.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:14px">
+        <a class="btn primary" href="#top">Жоғарыға</a>
+        <a class="btn ghost" href="register.html">Воркшопқа жазылу</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>AI Qorym · Жасанды интеллект бойынша қысқа гид · 2026</div>
+    <div>Суреттер: Unsplash (тікелей сілтеме арқылы жүктеледі).</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
